@@ -6,9 +6,10 @@ var jade = require('jade');
 var index = require('./routers/index.js');
 
 app.set('port',process.env.PORT || 3000);
+app.use(express.static(__dirname+"/static"));
 
 app.set('view engine',"jade");
-app.set('views','./views');
+app.set('views',__dirname+'/views');
 
 app.use('/',index);
 
