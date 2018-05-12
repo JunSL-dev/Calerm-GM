@@ -7,6 +7,8 @@ router.get('/',function(req,res,next){
 
 router.post('/login',function(req,res,nex){
     console.log("user id : "+req.body.uid);
+
+    res.send(req.body.uid+"환영!");
 });
 
 module.exports = router;

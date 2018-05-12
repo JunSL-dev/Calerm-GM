@@ -1,2 +1,0 @@
-html,body{margin:0;height:100%;width:100%}*{box-sizing:border-box}header{background:#da6762;width:100%;height:100%}header nav{width:15%;height:100%;display:table;table-layout:fixed;float:left}header nav ul{margin:0;padding:0;width:100%;height:80%;display:table-cell;vertical-align:middle;text-align:center}header section{width:85%;height:100%;float:right;display:table;table-layout:fixed}header section div{text-align:center;color:#eee;display:table-cell;vertical-align:middle}header article{width:50%}
-/*# sourceMappingURL=index.min.css.map */

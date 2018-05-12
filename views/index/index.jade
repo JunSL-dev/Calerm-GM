@@ -3,7 +3,6 @@ html
         title Calerm
         include ../layouts/include_css.jade
         link(rel='stylesheet' href='/css/index.min.css')
-        script(src='/js/index.js')
     body
         header
             nav
@@ -97,7 +96,7 @@ html
         article#t6.t
             section
                 div
-                    form(action="/login" method="post")
+                    form(id="form")
                         label(for="uid" class='shadow-text') E-mail
                         br
                         input(type="text" name="uid" id="uid" placeholder="Input your email")
@@ -107,7 +106,7 @@ html
                         input(type="password" name="pwd" id="pwd" placeholder="Input your password")
                         br
                         button(id="yet")
-                            strong 아직 회원이 아닙니까? <strike>설마??<strike> ㅇㅇ 당근이지
+                            strong 아직 회원이 아닙니까? <strike>설마??<strike>
                         br
                         button(type="submit" id="login") Login 
 
@@ -118,3 +117,4 @@ html
 
         
     include ../layouts/include.jade
+    script(src='/js/index.js')
