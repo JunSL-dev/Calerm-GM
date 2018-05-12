@@ -9,6 +9,18 @@ html, body{
     user-select: none;
 }
 
+.shadow-text{
+    text-shadow: 8px 8px 10px rgba(110,110,110,1);
+}
+
+.shadow-content{
+    text-shadow:4px 4px 5px rgba(90,90,90,1);
+}
+
+form{
+    margin:0;
+}
+
 * {
     box-sizing:border-box;
 }
@@ -30,19 +42,77 @@ p{
 }
 
 a{
-    transition:.6s all cubic-bezier(.5, .2, .2, 1.1);
+    &:hover i{
+        font-size:2.4rem;
+        color:#1e1e1e;
+    
+        opacity:0.8;
+    }
 
-    text-decoration:none;
-    color:#fff;
-
-    font-size:2rem;
+    i{
+        transition:.6s all cubic-bezier(.5, .2, .2, 1.1);
+    
+        text-decoration:none;
+        color:#fff;
+    
+        font-size:2rem;
+    }
 }
 
-a:hover{
-    font-size:2.4rem;
-    color:#1e1e1e;
+u{
+    text-decoration: none;
+    font-weight:500;
+}
 
-    opacity:0.8;
+strike{
+    font-weight:400;
+}
+
+@keyframes opacity{
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+.balloon{
+    transition: .5s all cubic-bezier(.5,.2,.2,1.1);
+
+    opacity:0;
+
+    position: absolute;
+    z-index:-1;
+    left:68%;
+    top:20%;
+
+    height:50px;
+    padding:5px 15px;
+
+    background:rgba(30,30,30,0.8);
+    border-radius:3px;
+
+    color:#eee;
+    font-weight:300;
+
+    line-height:40px;
+}
+
+.balloon::before{
+    content:"";
+
+    position:absolute;
+    
+    border-right:10px solid rgba(30,30,30,0.8);
+    border-top:5px solid transparent;
+    border-bottom:5px solid transparent;
+    
+    top:10px;
+    left:-10px;
+
+
 }
 
 header{
@@ -53,6 +123,8 @@ header{
     height:100%;
 
     nav{
+        // background:rgba(40,40,40,1);
+
         position:absolute;
         left:0;
         top:0;
@@ -80,6 +152,17 @@ header{
             text-align:center;
 
             line-height:5rem;
+
+            li{
+                position: relative;
+            
+                .info-on:hover ~ .balloon {
+                    // display:block;
+                    opacity: 1;
+                }
+
+            }
+
         }
 
 
@@ -106,18 +189,24 @@ header{
 }
 
 .t{
-    position:fixed;
+    position:absolute;
     top:0;
-    right:-100%;
+    right:0%;
+
+    opacity:0;
     
     transition:.6s all cubic-bezier(.5, .2, .2, 1.1);
 
     width:100%;
     height:100%;
 
-    background:black;
+    background:rgba(80,80,80,1);
 
     section{
+        position: relative;
+        z-index:2;
+        left:100%;
+
         display:table;
         table-layout:fixed;
 
@@ -163,7 +252,81 @@ header{
 
 #t5{
     section{
-        background:#424241;
+        background:#ab8ecd;
+    }
+}
+
+.t:last-of-type{
+    section{
+        background:#e08b6f;
+        table-layout: fixed;
+
+        div{
+            form{
+                width:50%;
+                margin:0 auto;
+
+                font-size:3rem;
+                text-align:left;
+
+                input{
+                    transition:.6s all cubic-bezier(.5,.2,.2,1.1);
+
+                    width:100%;
+                    height:45px;
+
+                    background:#fff;
+                    
+                    color:rgba(80,80,80,1);
+                    font-size:1.5rem;
+
+                    margin-bottom:25px;
+                    padding:2px;
+
+                    box-shadow:4px 4px 5px rgba(90,90,90,1);
+                    border:none;
+                    border-radius:5px;
+
+                    outline:none;
+
+                    &:focus{
+                        box-shadow:8px 8px 15px rgba(100,100,100,1);
+
+                    }
+                }
+
+                #yet{
+                    background:transparent;
+
+                    font-size:.8rem;
+                    color: #373229;
+
+                    border:none;
+
+                    cursor:pointer;
+                }
+
+                #login{
+                    transition:.6s all cubic-bezier(.5,.7,.2,1.1);
+
+                    float:right;
+
+                    font-size:1.8rem;
+                    color:#fff;
+
+                    border:none;
+                    border-radius: 5px;
+                    background:transparent;
+
+                    padding:5px 15px;
+
+                    &:hover{
+                        color:#e08b6f;
+                        background:#fff;
+                    }
+                }
+            }
+        }
     }
 }
 

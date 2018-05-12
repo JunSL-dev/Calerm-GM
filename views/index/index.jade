@@ -8,24 +8,34 @@ html
         header
             nav
                 ul
-                    li 
-                        a(href="#t0")
+                    li(class='home')
+                        a(href="#t0" class='info-on')
                             i(class="fas fa-home")
-                    li
-                        a(href="#t1")
+                        .balloon Home
+                    li(class='info')
+                        a(href="#t1" class='info-on')
+                            i(class="fas fa-info")
+                        .balloon Information
+                    li(class='alarm')
+                        a(href="#t2" class='info-on')
                             i(class="fas fa-bell")
-                    li
-                        a(href="#t2")
+                        .balloon Alarm
+                    li(class='duration')
+                        a(href="#t3" class='info-on')
                             i(class="fas fa-calendar-check")
-                    li
-                        a(href="#t3")
+                        .balloon Calendar
+                    li(class='group')
+                        a(href="#t4" class='info-on')
                             i(class='fas fa-users')
-                    li
-                        a(href="#t4")
+                        .balloon Group
+                    li(class='sns')
+                        a(href="#t5" class='info-on')
                             i(class='fas fa-sticky-note')
-                    li
-                        a(href="#t5")
+                        .balloon SNS
+                    li(class='to-login')
+                        a(href="#t6" class='info-on')
                             i(class='fas fa-sign-in-alt')
+                        .balloon Login
             section#t0
                 div
                     h1 Calerm GM
@@ -33,28 +43,75 @@ html
         article#t1.t
             section
                 div
-                    h1 Foo
-                    p Bar
+                    h1.shadow-text Calerm GM
+                    p :: <u>C</u>alendar + <u>Al</u>arm + T<u>erm</u> | <u>G</u>roup + <u>M</u>emory
+                        br
+                        br
+                        |Calendar : 달력 기능 내장 
+                        br
+                        strike ( 당연한걸;; )
         article#t2.t
             section
                 div
-                    h1 Foo
-                    p Bar
+                    h1.shadow-text Alarm
+                    p :: 설정한 시간대에 맞춘 일정 알림 서비스 지원
         article#t3.t
             section
                 div
-                    h1 Foo
-                    p Bar
+                    h1.shadow-text Calendar
+                    p :: Time Table 형식의 하루 일정 등록
+                        br
+                        br
+                        |월/년도별 일정을 보는 새로운 방식 : <strong class='shadow-text'>Line Calendar</strong> 
         article#t4.t
             section
                 div
-                    h1 Foo
-                    p Bar
+                    h1.shadow-text Group
+                    p :: 흔한 사람의 흔한 사회생활을 위해
+                        br
+                        br
+                        |나를 제외한
+                        br
+                        strong.shadow-text 흔한 다른 사람의 일정을 고려해서
+                        br
+                        |흔한 <strong class='shadow-text'>단체일정을</strong>
+                        br
+                        |<strong class='shadow-text'>효율적</strong>으로 잡아봅시다 
         article#t5.t
             section
                 div
-                    h1 Foo
-                    p Bar
+                    h1.shadow-text SNS 기능
+                    p :: 현재와 미래를 관리하는 현존하는 Calendar,
+                        br
+                        br
+                        |<strong class='shadow-text'>현재</strong>는 <strong class='shadow-text'>기록</strong>하고
+                        br
+                        |<strong class='shadow-text'>과거</strong>는 <strong class='shadow-text'>추억</strong>하는
+                        br
+                        strong.shadow-text SNS를
+                        br
+                        br
+                        |바로 <strong class='shadow-text'>Calerm GM</strong>에서
+                        strong.shadow-text 일정관리와 함께
+                        |즐겨봅시다 
+        article#t6.t
+            section
+                div
+                    form(action="/login" method="post")
+                        label(for="uid" class='shadow-text') E-mail
+                        br
+                        input(type="text" name="uid" id="uid" placeholder="Input your email")
+                        br
+                        label(for="pwd" class='shadow-text') Password
+                        br
+                        input(type="password" name="pwd" id="pwd" placeholder="Input your password")
+                        br
+                        button(id="yet")
+                            strong 아직 회원이 아닙니까? <strike>설마??<strike> ㅇㅇ 당근이지
+                        br
+                        button(type="submit" id="login") Login 
+
+
         
         
 
