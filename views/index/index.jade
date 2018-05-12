@@ -1,10 +1,63 @@
 html
     head
         title Calerm
-        link(href='/css/index.css')
+        include ../layouts/include_css.jade
+        link(rel='stylesheet' href='/css/index.min.css')
         script(src='/js/index.js')
     body
-        header 
-            
+        header
+            nav
+                ul
+                    li 
+                        a(href="#t0")
+                            i(class="fas fa-home")
+                    li
+                        a(href="#t1")
+                            i(class="fas fa-bell")
+                    li
+                        a(href="#t2")
+                            i(class="fas fa-calendar-check")
+                    li
+                        a(href="#t3")
+                            i(class='fas fa-users')
+                    li
+                        a(href="#t4")
+                            i(class='fas fa-sticky-note')
+                    li
+                        a(href="#t5")
+                            i(class='fas fa-sign-in-alt')
+            section#t0
+                div
+                    h1 Calerm GM
+                    p 흔한 사람의 흔한 달력
+        article#t1.t
+            section
+                div
+                    h1 Foo
+                    p Bar
+        article#t2.t
+            section
+                div
+                    h1 Foo
+                    p Bar
+        article#t3.t
+            section
+                div
+                    h1 Foo
+                    p Bar
+        article#t4.t
+            section
+                div
+                    h1 Foo
+                    p Bar
+        article#t5.t
+            section
+                div
+                    h1 Foo
+                    p Bar
+        
+        
+
+
         
     include ../layouts/include.jade
