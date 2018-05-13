@@ -9,16 +9,16 @@ html, body{
     user-select: none;
 }
 
+::-webkit-scrollbar{
+    width:0;
+}
+
 button{
     outline:none;
 }
 
 .shadow-text{
-    text-shadow: 8px 8px 10px rgba(110,110,110,1);
-}
-
-.shadow-content{
-    text-shadow:4px 4px 5px rgba(90,90,90,1);
+    text-shadow: 2px 2px 5px rgba(110,110,110,1);
 }
 
 form{
@@ -27,6 +27,7 @@ form{
 
 * {
     box-sizing:border-box;
+    transition:.3s;
 }
 
 h1{
@@ -260,7 +261,42 @@ header{
     }
 }
 
-.t:last-of-type{
+form{
+    width:50%;
+    margin:0 auto;
+
+    text-decoration:none;
+
+    font-size:3rem;
+    text-align:left;
+
+    input{
+        transition: .6s all cubic-bezier(.5,.2,.2,1.1);
+
+        width:100%;
+        height:45px;
+
+        background:#fff;
+
+        color:rgba(80,80,80,1);
+        font-size:1.5rem;
+
+        margin-bottom:25px;
+        padding:2px;
+
+        box-shadow:4px 4px 5px rgba(90,90,90,1);
+        border:none;
+        border-radius:5px;
+
+        outline:none;
+
+        &:focus{
+            box-shadow:8px 8px 15px rgba(100,100,100,1);
+        }
+    }
+}
+
+#t6{
     section{
         background:#e08b6f;
         table-layout: fixed;
@@ -270,17 +306,19 @@ header{
                 width:50%;
                 margin:0 auto;
 
+                text-decoration:none;
+
                 font-size:3rem;
                 text-align:left;
 
                 input{
-                    transition:.6s all cubic-bezier(.5,.2,.2,1.1);
+                    transition: .6s all cubic-bezier(.5,.2,.2,1.1);
 
                     width:100%;
                     height:45px;
 
                     background:#fff;
-                    
+
                     color:rgba(80,80,80,1);
                     font-size:1.5rem;
 
@@ -295,15 +333,14 @@ header{
 
                     &:focus{
                         box-shadow:8px 8px 15px rgba(100,100,100,1);
-
                     }
                 }
-
                 #yet{
                     background:transparent;
 
                     font-size:.8rem;
-                    color: #373229;
+                    text-decoration: none;
+                    color:#373229;
 
                     border:none;
 
@@ -323,6 +360,7 @@ header{
                     background:transparent;
 
                     padding:5px 15px;
+                    margin-top:5px;
 
                     &:hover{
                         color:#e08b6f;
@@ -332,6 +370,66 @@ header{
             }
         }
     }
+}
+
+#t7{
+    section{
+        background:#da6762;
+
+        #close{
+           color:#fff;
+           font-size:3rem;
+
+           text-align:right;
+    
+            position:absolute;
+            left:5rem;
+            top:2rem;
+
+            cursor:pointer;
+        }
+
+        div{
+            width:100%;
+            form{
+                #signup{
+                    transition:.6s all cubic-bezier(.5,.7,.2,1.1);
+
+                    float:right;
+
+                    font-size:1.8rem;
+                    color:#fff;
+
+                    border:none;
+                    border-radius: 5px;
+                    background:transparent;
+
+                    padding:5px 15px;
+
+                    &:hover{
+                        color:#e08b6f;
+                        background:#fff;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.alert{
+    display:none;
+
+    color:#fdc34a;
+    font-size:1rem;
+    font-weight:300;
+
+    margin-left:5px;
+}
+
+#no{
+    font-size:.8rem;
+    float:right;
 }
 
 .t:target{

@@ -8,31 +8,31 @@ html
             nav
                 ul
                     li(class='home')
-                        a(href="#t0" class='info-on')
+                        a(class='info-on' data-number='0')
                             i(class="fas fa-home")
                         .balloon Home
                     li(class='info')
-                        a(href="#t1" class='info-on')
+                        a(class='info-on' data-number='1')
                             i(class="fas fa-info")
                         .balloon Information
                     li(class='alarm')
-                        a(href="#t2" class='info-on')
+                        a(class='info-on' data-number='2')
                             i(class="fas fa-bell")
                         .balloon Alarm
                     li(class='duration')
-                        a(href="#t3" class='info-on')
+                        a(class='info-on' data-number='3')
                             i(class="fas fa-calendar-check")
                         .balloon Calendar
                     li(class='group')
-                        a(href="#t4" class='info-on')
+                        a(class='info-on' data-number='4')
                             i(class='fas fa-users')
                         .balloon Group
                     li(class='sns')
-                        a(href="#t5" class='info-on')
+                        a(class='info-on' data-number='5')
                             i(class='fas fa-sticky-note')
                         .balloon SNS
                     li(class='to-login')
-                        a(href="#t6" class='info-on')
+                        a(class='info-on' data-number='6')
                             i(class='fas fa-sign-in-alt')
                         .balloon Login
             section#t0
@@ -96,19 +96,49 @@ html
         article#t6.t
             section
                 div
-                    form(id="form")
+                    h1.shadow-text Login
+                    form(id="login-form")
                         label(for="uid" class='shadow-text') E-mail
                         br
-                        input(type="text" name="uid" id="uid" placeholder="Input your email")
+                        input(type="text" name="uid" id="uid" placeholder="Input your email" required)
                         br
                         label(for="pwd" class='shadow-text') Password
                         br
-                        input(type="password" name="pwd" id="pwd" placeholder="Input your password")
+                        input(type="password" name="pwd" id="pwd" placeholder="Input your password" required)
                         br
-                        button(id="yet")
-                            strong 아직 회원이 아닙니까? <strike>설마??<strike>
+                        a(id="yet" data-number='7')
+                            strong 아직 회원이 아닙니까? <strike>설마??</strike>
+                        span.alert#no
                         br
                         button(type="submit" id="login") Login 
+
+        article#t7.t    
+            section
+                span#close(data-number="6")
+                    i.fas.fa-times-circle
+                div
+                    h1.shadow-text Sign Up
+                    form(id="sign-form")
+                        label(for="sname" class='shadow-text') Name
+                        br
+                        input(type="text" name="sname" id="sname" placeholder="Input your name" required)
+                        br
+                        label(for="suid" class='shadow-text') E-mail
+                            span#already.alert
+                        br
+                        input(type="text" name="suid" id="suid" placeholder="Input your email" required)
+                        br
+                        label(for="spwd" class='shadow-text') Password
+                        br
+                        input(type="password" name="spwd" id="spwd" placeholder="Input your password" required)
+                        br
+                        label(for="spwd-check" class='shadow-text') Password Check 
+                            span.alert#same
+                        br
+                        input(type="password" name="spwd-check" id="spwd-check" required)
+                        br
+                        button(type="submit" id="signup") Sign Up 
+        
 
 
         
