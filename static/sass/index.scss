@@ -210,7 +210,7 @@ header{
     right:0%;
 
     &::after{
-        transition:.6s all cubic-bezier(.5,.2,.2,1.1);
+        transition:1s all cubic-bezier(.5,.2,.2,1.1);
 
         content:'';
         position:absolute;
