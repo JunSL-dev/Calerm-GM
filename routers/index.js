@@ -13,15 +13,15 @@ router.get('/',function(req,res,next){
 router.post('/login',function(req,res,next){
     var sess = req.session;
 
-    console.log("user id : "+req.body.uid);
-
     // login 성공
-    userInfo.find({"userId":req.body.uid,"password":sha256.x2(req.body.pwd)},function(err, info){
+    userInfo.findOne({"userId":req.body.uid,"password":sha256.x2(req.body.pwd)},function(err, info){
         if(err){
             return res.status(500).json({"error":1});
         }
         if(info.length != 0){
-            sess.username = req.body.uid;
+            console.log("로그인 성공 : "+info._id);
+            
+            sess._id = info._id;
             res.json({result:1});
         } else{
             res.json({no:1});
@@ -47,14 +47,14 @@ router.post('/signup',function(req,res,next){
             uinfo.userId = req.body.uid;
             uinfo.password = sha256.x2(req.body.pwd);
         
-            uinfo.save(function(err){
+            uinfo.save(function(err,info){
                 if(err){
                     console.log("There's some errors with making account");
                     res.json({result:false});
                     return;
                 }
         
-                sess.username = req.body.uid;
+                sess.username = info._id;
                 res.json({result:true});
         
             });
